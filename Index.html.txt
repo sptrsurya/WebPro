@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WebPro Agency</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{background:#0B0F19;color:white}
+
+/* NAVBAR */
+header{
+position:fixed;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:rgba(11,15,25,0.6);
+backdrop-filter:blur(12px);
+z-index:999;
+}
+.logo{font-weight:bold;color:#3B82F6;font-size:22px}
+nav a{margin:0 15px;color:white;text-decoration:none}
+.btn{
+background:#3B82F6;
+padding:10px 20px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:radial-gradient(circle at top,#1e3a8a,#0B0F19);
+}
+.hero h1{font-size:48px}
+.hero p{max-width:600px;margin:20px;color:#cbd5e1}
+
+/* SECTION */
+.section{padding:100px 10%;text-align:center}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+}
+.card{
+background:#111827;
+padding:30px;
+border-radius:12px;
+transition:0.3s;
+}
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* BUTTON WA FLOAT */
+.wa{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:15px;
+border-radius:50%;
+font-size:20px;
+text-decoration:none;
+}
+
+/* CTA */
+.cta{
+background:#3B82F6;
+padding:80px;
+}
+
+/* ANIMASI */
+.fade{opacity:0;transform:translateY(30px);transition:1s}
+.fade.show{opacity:1;transform:translateY(0)}
+
+footer{
+background:#020617;
+padding:30px;
+text-align:center;
+color:#94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">WebPro</div>
+<nav>
+<a href="#">Home</a>
+<a href="#">Layanan</a>
+<a href="#">Portfolio</a>
+<a href="#">Harga</a>
+<a href="#">Kontak</a>
+</nav>
+<button class="btn">Konsultasi</button>
+</header>
+
+<section class="hero">
+<h1>Website Premium untuk Bisnis Anda</h1>
+<p>Tingkatkan kepercayaan dan penjualan dengan website modern & profesional</p>
+<button class="btn">Mulai Sekarang</button>
+</section>
+
+<section class="section fade">
+<h2>Kenapa WebPro?</h2>
+<div class="grid">
+<div class="card">Desain Premium</div>
+<div class="card">Fast Loading</div>
+<div class="card">Mobile Friendly</div>
+<div class="card">SEO Ready</div>
+</div>
+</section>
+
+<section class="section fade">
+<h2>Layanan</h2>
+<div class="grid">
+<div class="card">Company Profile</div>
+<div class="card">Landing Page</div>
+<div class="card">Website UMKM</div>
+<div class="card">Custom System</div>
+</div>
+</section>
+
+<section class="cta fade">
+<h2>Siap Naik Level?</h2>
+<button class="btn">Konsultasi Sekarang</button>
+</section>
+
+<footer>
+<p>© 2026 WebPro</p>
+</footer>
+
+<a class="wa" href="https://wa.me/628XXXXXXXXXX">💬</a>
+
+<script>
+const fade = document.querySelectorAll('.fade');
+window.addEventListener('scroll',()=>{
+fade.forEach(el=>{
+if(el.getBoundingClientRect().top < window.innerHeight-100){
+el.classList.add('show')
+}
+})
+})
+</script>
+
+</body>
+</html>
